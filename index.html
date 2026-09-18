@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopVibe — Trendy, energetic, conversion-focused fashion and lifestyle e-commerce storefront.">
+  <title>ShopVibe — Trendy Fashion &amp; Lifestyle Storefront</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="top-announcement" role="region" aria-label="Special Offer">
+    <span>Limited Drop: Use code <code>VIBE20</code> for 20% OFF — Free express shipping over $75</span>
+  </aside>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#" class="brand-logo" aria-label="ShopVibe Home">
+        <span>ShopVibe</span>
+        <span class="brand-badge">2026</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link active" data-category="all">All Drops</a></li>
+          <li><a href="#catalog" class="nav-link" data-category="Outerwear">Outerwear</a></li>
+          <li><a href="#catalog" class="nav-link" data-category="Streetwear">Streetwear</a></li>
+          <li><a href="#catalog" class="nav-link" data-category="Footwear">Footwear</a></li>
+          <li><a href="#catalog" class="nav-link" data-category="Accessories">Accessories</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-bar-inline">
+          <span class="search-icon-btn" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input type="text" id="searchInput" class="search-input-field" placeholder="Search drops..." aria-label="Search drops">
+          <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="Clear search">✕</button>
+        </div>
+
+        <button type="button" class="icon-button tooltip" id="wishlistBtn" data-tooltip="Wishlist" aria-label="Saved items">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+
+        <button type="button" class="icon-button tooltip" id="cartToggleBtn" data-tooltip="Shopping Bag" aria-label="Shopping bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-content">
+            <span class="overline">New Season Release</span>
+            <h1 class="hero-title">STREETWEAR MEETS <span>ELEVATED</span> MINIMALISM.</h1>
+            <p class="hero-description">Clean cuts, heavy-gauge fabrics, and precision streetwear tailored for effortless daily expression. Designed for those who demand visual punch.</p>
+            <div class="hero-ctas">
+              <a href="#catalog" class="btn btn-primary btn-lg">Explore Collection</a>
+              <button type="button" class="btn btn-secondary btn-lg" id="heroPromoBtn">Get 20% Voucher</button>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-number">18,500+</span>
+                <span class="metric-label">Drops Delivered</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">4.9 / 5</span>
+                <span class="metric-label">Verified Reviews</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Organic Cotton</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-img-container">
+              <img src="assets/images/hero-vest.jpg" alt="Featured Streetwear Drop" width="800" height="1000" loading="eager">
+            </div>
+            <div class="hero-floating-card">
+              <div class="floating-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="floating-card-text">
+                <span class="floating-card-title">Utility Vest 2.0</span>
+                <span class="floating-card-sub">Top Rated Drop &bull; $115</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-strip">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Express Global Shipping</h4>
+              <p>Complimentary express delivery on all orders above $75.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Authenticity Guaranteed</h4>
+              <p>Independently verified textiles and master craftmanship.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>30-Day Hassle-Free Returns</h4>
+              <p>Simple prepaid return labels with immediate refund release.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="overline">Curated Catalog</span>
+          <h2 class="section-title">New Arrivals &amp; Essentials</h2>
+          <p class="section-subtitle">Every piece is engineered for lasting durability and effortless style synergy.</p>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="filter-chips-row" id="categoryChips">
+            <button type="button" class="filter-chip selected" data-filter="all">All Items</button>
+            <button type="button" class="filter-chip" data-filter="Outerwear">Outerwear</button>
+            <button type="button" class="filter-chip" data-filter="Streetwear">Streetwear</button>
+            <button type="button" class="filter-chip" data-filter="Footwear">Footwear</button>
+            <button type="button" class="filter-chip" data-filter="Accessories">Accessories</button>
+          </div>
+
+          <div class="filter-controls-secondary">
+            <label class="checkbox-control">
+              <input type="checkbox" id="stockFilterCheckbox" class="checkbox-native">
+              <span class="custom-checkbox">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Low Stock Alerts Only</span>
+            </label>
+
+            <div class="sort-select-wrapper">
+              <select id="sortSelect" class="sort-select" aria-label="Sort products by">
+                <option value="featured">Featured Drops</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Customer Rating</option>
+              </select>
+              <span class="select-chevron" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div id="productsGrid" class="products-grid" role="region" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-info">
+            <span class="overline">Exclusive Access</span>
+            <h3>Join The VIP Drop Club</h3>
+            <p>Subscribe for secret drop links, restock alerts, and 20% off your initial purchase.</p>
+          </div>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <div class="input-group">
+              <label for="newsletterEmail" class="input-label">Email Address</label>
+              <div class="input-with-action">
+                <input type="email" id="newsletterEmail" class="input-field" placeholder="you@domain.com" required>
+                <button type="submit" class="btn btn-primary btn-md">Get Invite</button>
+              </div>
+              <span id="newsletterHelper" class="input-helper">We respect your inbox. Instant unsubscribe at any time.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <span>ShopVibe</span>
+            <span class="brand-badge">EST 2026</span>
+          </a>
+          <p>Next-generation lifestyle and streetwear storefront built for bold individuals.</p>
+        </div>
+
+        <div class="footer-column">
+          <h5>Shop Categories</h5>
+          <ul class="footer-links">
+            <li><a href="#catalog">Outerwear Coats</a></li>
+            <li><a href="#catalog">Heavyweight Tees</a></li>
+            <li><a href="#catalog">Cargo Bottoms</a></li>
+            <li><a href="#catalog">Footwear &amp; Soles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Customer Care</h5>
+          <ul class="footer-links">
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Portal</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="#">Brand Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Press Releases</a></li>
+            <li><a href="#">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopVibe Apparel Inc. All rights reserved.</p>
+        <div class="payment-badges">
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">APPLE PAY</span>
+          <span class="payment-pill">QRIS</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="floatingCartBtn" class="floating-cart-trigger" aria-label="Open Cart Bag">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <path d="M16 10a4 4 0 0 1-8 0"></path>
+    </svg>
+    <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+  </button>
+
+  <div id="drawerBackdrop" class="drawer-backdrop" tabindex="-1"></div>
+  <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="drawer-header">
+      <h3>
+        <span>Your Bag</span>
+        <span id="drawerCountText" class="drawer-badge-text">(0)</span>
+      </h3>
+      <button type="button" id="closeDrawerBtn" class="close-btn" aria-label="Close shopping bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="free-shipping-bar-wrap">
+      <div class="free-shipping-text" id="freeShippingNotice">
+        Add <strong>$75.00</strong> more for <strong>FREE Express Delivery</strong>
+      </div>
+      <div class="free-shipping-track">
+        <div class="free-shipping-fill" id="freeShippingFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <div id="drawerBody" class="drawer-body">
+      <div id="cartEmptyState" class="cart-empty-message">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <p>Your bag is currently empty.</p>
+        <a href="#catalog" class="btn btn-primary btn-sm" id="continueShoppingBtn">Browse Drops</a>
+      </div>
+      <div id="cartItemsContainer"></div>
+    </div>
+
+    <div id="drawerFooter" class="drawer-footer">
+      <div class="promo-input-row">
+        <input type="text" id="promoCodeInput" class="promo-input" placeholder="Promo code (e.g. VIBE20)" aria-label="Promo code">
+        <button type="button" id="applyPromoBtn" class="btn btn-secondary btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Estimated Shipping</span>
+        <span id="cartShippingValue">FREE</span>
+      </div>
+      <div class="cart-summary-line" id="discountSummaryRow" style="display: none; color: var(--color-success);">
+        <span>Discount (<span id="discountCodeName">VIBE20</span>)</span>
+        <span id="cartDiscountValue">-$0.00</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Subtotal</span>
+        <span id="cartTotalValue">$0.00</span>
+      </div>
+      <button type="button" id="checkoutBtn" class="btn btn-primary btn-lg">Checkout Now</button>
+    </div>
+  </aside>
+
+  <div id="modalBackdrop" class="modal-backdrop" tabindex="-1"></div>
+  <div id="quickViewModal" class="modal-dialog" role="dialog" aria-modal="true" aria-label="Product Quick View">
+    <div class="modal-content-grid">
+      <button type="button" id="closeModalBtn" class="close-btn modal-close-trigger" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-image-col">
+        <img id="modalProductImage" src="assets/images/vest.jpg" alt="" width="600" height="600">
+      </div>
+      <div class="modal-details-col">
+        <span id="modalProductCategory" class="product-category"></span>
+        <h3 id="modalProductTitle" class="modal-product-title"></h3>
+        <div class="product-rating">
+          <div class="stars-row">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <span id="modalProductRating" class="rating-count"></span>
+        </div>
+        <div class="product-pricing">
+          <span id="modalProductPrice" class="price-promo"></span>
+          <span id="modalProductOriginalPrice" class="price-original"></span>
+        </div>
+        <p id="modalProductDescription" class="modal-description"></p>
+        <div class="variant-picker">
+          <span class="variant-picker-label">Select Size</span>
+          <div class="size-pill-group">
+            <label class="size-radio-label">
+              <input type="radio" name="modalSize" value="S" class="size-radio-native">
+              <span class="size-pill">S</span>
+            </label>
+            <label class="size-radio-label">
+              <input type="radio" name="modalSize" value="M" class="size-radio-native" checked>
+              <span class="size-pill">M</span>
+            </label>
+            <label class="size-radio-label">
+              <input type="radio" name="modalSize" value="L" class="size-radio-native">
+              <span class="size-pill">L</span>
+            </label>
+            <label class="size-radio-label">
+              <input type="radio" name="modalSize" value="XL" class="size-radio-native">
+              <span class="size-pill">XL</span>
+            </label>
+          </div>
+        </div>
+        <div class="card-action-bar">
+          <button type="button" id="modalAddToCartBtn" class="btn btn-primary btn-md">Add to Bag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="checkoutBackdrop" class="modal-backdrop" tabindex="-1"></div>
+  <div id="checkoutModal" class="modal-dialog checkout-dialog" role="dialog" aria-modal="true" aria-label="Checkout Payment">
+    <div class="checkout-wrapper">
+      <div class="checkout-header">
+        <div class="checkout-header-title">
+          <h3>Complete Your Order</h3>
+          <span class="checkout-badge-pill">256-BIT ENCRYPTED</span>
+        </div>
+        <button type="button" id="closeCheckoutBtn" class="close-btn" aria-label="Close checkout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="checkout-stepper">
+        <div class="step-node active" data-step="1">
+          <span class="step-bubble">1</span>
+          <span class="step-name">Shipping</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-node" data-step="2">
+          <span class="step-bubble">2</span>
+          <span class="step-name">Payment</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-node" data-step="3">
+          <span class="step-bubble">3</span>
+          <span class="step-name">Review</span>
+        </div>
+      </div>
+
+      <div class="checkout-body">
+        <div id="checkoutStep1" class="checkout-step-pane active">
+          <div class="pane-action-header">
+            <h4>Shipping Information</h4>
+            <button type="button" id="autofillDemoBtn" class="btn btn-secondary btn-sm">Demo Fast Fill</button>
+          </div>
+          <form id="shippingForm" class="checkout-form-grid" novalidate>
+            <div class="form-field">
+              <label for="shipEmail" class="form-label">Email Address *</label>
+              <input type="email" id="shipEmail" class="input-field" placeholder="alex@gmail.com" required>
+            </div>
+            <div class="form-field">
+              <label for="shipName" class="form-label">Full Name *</label>
+              <input type="text" id="shipName" class="input-field" placeholder="Alex Pratama" required>
+            </div>
+            <div class="form-field full-width">
+              <label for="shipAddress" class="form-label">Street Address *</label>
+              <input type="text" id="shipAddress" class="input-field" placeholder="Jl. Sudirman No. 42, Senayan" required>
+            </div>
+            <div class="form-field">
+              <label for="shipCity" class="form-label">City *</label>
+              <input type="text" id="shipCity" class="input-field" placeholder="Jakarta Selatan" required>
+            </div>
+            <div class="form-field">
+              <label for="shipZip" class="form-label">Postal Code *</label>
+              <input type="text" id="shipZip" class="input-field" placeholder="12190" required>
+            </div>
+            <div class="form-field full-width">
+              <label for="shipPhone" class="form-label">Phone Number *</label>
+              <input type="tel" id="shipPhone" class="input-field" placeholder="+62 812-3456-7890" required>
+            </div>
+          </form>
+          <div class="checkout-step-actions">
+            <div></div>
+            <button type="button" id="toStep2Btn" class="btn btn-primary btn-md">Continue to Payment &rarr;</button>
+          </div>
+        </div>
+
+        <div id="checkoutStep2" class="checkout-step-pane">
+          <h4>Select Payment Method</h4>
+          <div class="payment-method-selector">
+            <button type="button" class="pay-method-tab active" data-method="card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              <span>Credit / Debit Card</span>
+            </button>
+            <button type="button" class="pay-method-tab" data-method="va">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              <span>Virtual Account</span>
+            </button>
+            <button type="button" class="pay-method-tab" data-method="qris">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>QRIS Instant</span>
+            </button>
+          </div>
+
+          <div id="cardPaymentPane" class="payment-detail-box active">
+            <div class="checkout-form-grid">
+              <div class="form-field full-width">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input type="text" id="cardNumber" class="input-field" placeholder="4242 4242 4242 4242" maxlength="19">
+              </div>
+              <div class="form-field">
+                <label for="cardExpiry" class="form-label">Expiration (MM/YY)</label>
+                <input type="text" id="cardExpiry" class="input-field" placeholder="12/28" maxlength="5">
+              </div>
+              <div class="form-field">
+                <label for="cardCvv" class="form-label">CVV</label>
+                <input type="password" id="cardCvv" class="input-field" placeholder="123" maxlength="4">
+              </div>
+            </div>
+          </div>
+
+          <div id="vaPaymentPane" class="payment-detail-box">
+            <label class="form-label">Select Destination Bank</label>
+            <div class="bank-pill-row">
+              <button type="button" class="bank-pill selected" data-bank="BCA">BCA</button>
+              <button type="button" class="bank-pill" data-bank="Mandiri">Mandiri</button>
+              <button type="button" class="bank-pill" data-bank="BNI">BNI</button>
+              <button type="button" class="bank-pill" data-bank="BRI">BRI</button>
+            </div>
+            <div class="va-display-card">
+              <span class="va-label">Virtual Account Number:</span>
+              <div class="va-number-row">
+                <span id="vaNumberDisplay" class="va-number">8801 2948 2018 4712</span>
+                <button type="button" id="copyVaBtn" class="btn btn-secondary btn-sm">Copy</button>
+              </div>
+              <span class="va-hint">Automatic verification within 60 seconds after transfer.</span>
+            </div>
+          </div>
+
+          <div id="qrisPaymentPane" class="payment-detail-box">
+            <div class="qris-card">
+              <div class="qris-code-box">
+                <svg width="180" height="180" viewBox="0 0 100 100" fill="currentColor">
+                  <rect x="10" y="10" width="20" height="20" />
+                  <rect x="70" y="10" width="20" height="20" />
+                  <rect x="10" y="70" width="20" height="20" />
+                  <rect x="15" y="15" width="10" height="10" fill="#FFFFFF" />
+                  <rect x="75" y="15" width="10" height="10" fill="#FFFFFF" />
+                  <rect x="15" y="75" width="10" height="10" fill="#FFFFFF" />
+                  <rect x="40" y="15" width="20" height="6" />
+                  <rect x="40" y="30" width="12" height="12" />
+                  <rect x="40" y="50" width="6" height="20" />
+                  <rect x="52" y="50" width="18" height="6" />
+                  <rect x="52" y="65" width="10" height="15" />
+                  <rect x="70" y="70" width="18" height="18" />
+                  <rect x="40" y="80" width="8" height="8" />
+                </svg>
+              </div>
+              <span class="qris-timer">Scan with GoPay / OVO / Dana / BCA (Expires in 14:59)</span>
+            </div>
+          </div>
+
+          <div class="checkout-step-actions">
+            <button type="button" id="backToStep1Btn" class="btn btn-ghost btn-md">&larr; Back</button>
+            <button type="button" id="toStep3Btn" class="btn btn-primary btn-md">Review Order &rarr;</button>
+          </div>
+        </div>
+
+        <div id="checkoutStep3" class="checkout-step-pane">
+          <h4>Order Summary &amp; Review</h4>
+          <div class="order-review-container">
+            <div class="review-box">
+              <h5>Deliver To</h5>
+              <p id="reviewRecipient" class="review-text"></p>
+              <p id="reviewAddress" class="review-text"></p>
+            </div>
+            <div class="review-box">
+              <h5>Payment Method</h5>
+              <p id="reviewPayment" class="review-text"></p>
+            </div>
+          </div>
+          <div class="review-items-list" id="reviewItemsList"></div>
+          <div class="review-totals-box">
+            <div class="cart-summary-line">
+              <span>Subtotal</span>
+              <span id="reviewSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+              <span>Shipping</span>
+              <span id="reviewShipping">FREE</span>
+            </div>
+            <div class="cart-summary-line" id="reviewDiscountRow" style="display: none; color: var(--color-success);">
+              <span>Discount</span>
+              <span id="reviewDiscount">-$0.00</span>
+            </div>
+            <div class="cart-summary-line total">
+              <span>Grand Total</span>
+              <span id="reviewTotal">$0.00</span>
+            </div>
+          </div>
+          <div class="checkout-step-actions">
+            <button type="button" id="backToStep2Btn" class="btn btn-ghost btn-md">&larr; Back</button>
+            <button type="button" id="placeOrderBtn" class="btn btn-primary btn-lg">Confirm &amp; Pay Now</button>
+          </div>
+        </div>
+
+        <div id="checkoutStepSuccess" class="checkout-step-pane">
+          <div class="order-success-card">
+            <div class="success-icon-badge">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3>Payment Confirmed!</h3>
+            <p class="success-order-id">Order ID: <code id="confirmedOrderId">SV-2026-89421</code></p>
+            <p class="success-desc">Thank you for your drop order! A tracking confirmation dispatch was sent to <strong id="confirmedEmail">alex@gmail.com</strong>.</p>
+            <div class="success-meta-box">
+              <div class="meta-line">
+                <span>Estimated Arrival:</span>
+                <strong>2-3 Business Days</strong>
+              </div>
+              <div class="meta-line">
+                <span>Amount Paid:</span>
+                <strong id="confirmedTotal">$0.00</strong>
+              </div>
+            </div>
+            <div class="success-actions">
+              <button type="button" id="printReceiptBtn" class="btn btn-secondary btn-md">Print Receipt</button>
+              <button type="button" id="finishCheckoutBtn" class="btn btn-primary btn-md">Back to Store</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="assertive"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

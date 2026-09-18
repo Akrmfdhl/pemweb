@@ -798,5 +798,805 @@
     "path": "assets/images/accessories/accessories-25.jpg",
     "sizeBytes": 88705,
     "status": "success"
+  },
+  {
+    "id": "outerwear-26",
+    "category": "outerwear",
+    "filename": "outerwear-26.jpg",
+    "path": "assets/images/outerwear/outerwear-26.jpg",
+    "sizeBytes": 84240,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-27",
+    "category": "outerwear",
+    "filename": "outerwear-27.jpg",
+    "path": "assets/images/outerwear/outerwear-27.jpg",
+    "sizeBytes": 24087,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-28",
+    "category": "outerwear",
+    "filename": "outerwear-28.jpg",
+    "path": "assets/images/outerwear/outerwear-28.jpg",
+    "sizeBytes": 76965,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-29",
+    "category": "outerwear",
+    "filename": "outerwear-29.jpg",
+    "path": "assets/images/outerwear/outerwear-29.jpg",
+    "sizeBytes": 34470,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-30",
+    "category": "outerwear",
+    "filename": "outerwear-30.jpg",
+    "path": "assets/images/outerwear/outerwear-30.jpg",
+    "sizeBytes": 64824,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-31",
+    "category": "outerwear",
+    "filename": "outerwear-31.jpg",
+    "path": "assets/images/outerwear/outerwear-31.jpg",
+    "sizeBytes": 41365,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-32",
+    "category": "outerwear",
+    "filename": "outerwear-32.jpg",
+    "path": "assets/images/outerwear/outerwear-32.jpg",
+    "sizeBytes": 39060,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-33",
+    "category": "outerwear",
+    "filename": "outerwear-33.jpg",
+    "path": "assets/images/outerwear/outerwear-33.jpg",
+    "sizeBytes": 83575,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-34",
+    "category": "outerwear",
+    "filename": "outerwear-34.jpg",
+    "path": "assets/images/outerwear/outerwear-34.jpg",
+    "sizeBytes": 56281,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-35",
+    "category": "outerwear",
+    "filename": "outerwear-35.jpg",
+    "path": "assets/images/outerwear/outerwear-35.jpg",
+    "sizeBytes": 35094,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-36",
+    "category": "outerwear",
+    "filename": "outerwear-36.jpg",
+    "path": "assets/images/outerwear/outerwear-36.jpg",
+    "sizeBytes": 46696,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-37",
+    "category": "outerwear",
+    "filename": "outerwear-37.jpg",
+    "path": "assets/images/outerwear/outerwear-37.jpg",
+    "sizeBytes": 62537,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-38",
+    "category": "outerwear",
+    "filename": "outerwear-38.jpg",
+    "path": "assets/images/outerwear/outerwear-38.jpg",
+    "sizeBytes": 43594,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-39",
+    "category": "outerwear",
+    "filename": "outerwear-39.jpg",
+    "path": "assets/images/outerwear/outerwear-39.jpg",
+    "sizeBytes": 67041,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-40",
+    "category": "outerwear",
+    "filename": "outerwear-40.jpg",
+    "path": "assets/images/outerwear/outerwear-40.jpg",
+    "sizeBytes": 36652,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-41",
+    "category": "outerwear",
+    "filename": "outerwear-41.jpg",
+    "path": "assets/images/outerwear/outerwear-41.jpg",
+    "sizeBytes": 63105,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-42",
+    "category": "outerwear",
+    "filename": "outerwear-42.jpg",
+    "path": "assets/images/outerwear/outerwear-42.jpg",
+    "sizeBytes": 21146,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-43",
+    "category": "outerwear",
+    "filename": "outerwear-43.jpg",
+    "path": "assets/images/outerwear/outerwear-43.jpg",
+    "sizeBytes": 58556,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-44",
+    "category": "outerwear",
+    "filename": "outerwear-44.jpg",
+    "path": "assets/images/outerwear/outerwear-44.jpg",
+    "sizeBytes": 35600,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-45",
+    "category": "outerwear",
+    "filename": "outerwear-45.jpg",
+    "path": "assets/images/outerwear/outerwear-45.jpg",
+    "sizeBytes": 62306,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-46",
+    "category": "outerwear",
+    "filename": "outerwear-46.jpg",
+    "path": "assets/images/outerwear/outerwear-46.jpg",
+    "sizeBytes": 26452,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-47",
+    "category": "outerwear",
+    "filename": "outerwear-47.jpg",
+    "path": "assets/images/outerwear/outerwear-47.jpg",
+    "sizeBytes": 53839,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-48",
+    "category": "outerwear",
+    "filename": "outerwear-48.jpg",
+    "path": "assets/images/outerwear/outerwear-48.jpg",
+    "sizeBytes": 24752,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-49",
+    "category": "outerwear",
+    "filename": "outerwear-49.jpg",
+    "path": "assets/images/outerwear/outerwear-49.jpg",
+    "sizeBytes": 61187,
+    "status": "success"
+  },
+  {
+    "id": "outerwear-50",
+    "category": "outerwear",
+    "filename": "outerwear-50.jpg",
+    "path": "assets/images/outerwear/outerwear-50.jpg",
+    "sizeBytes": 40429,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-26",
+    "category": "streetwear",
+    "filename": "streetwear-26.jpg",
+    "path": "assets/images/streetwear/streetwear-26.jpg",
+    "sizeBytes": 65529,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-27",
+    "category": "streetwear",
+    "filename": "streetwear-27.jpg",
+    "path": "assets/images/streetwear/streetwear-27.jpg",
+    "sizeBytes": 62234,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-28",
+    "category": "streetwear",
+    "filename": "streetwear-28.jpg",
+    "path": "assets/images/streetwear/streetwear-28.jpg",
+    "sizeBytes": 93157,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-29",
+    "category": "streetwear",
+    "filename": "streetwear-29.jpg",
+    "path": "assets/images/streetwear/streetwear-29.jpg",
+    "sizeBytes": 114797,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-30",
+    "category": "streetwear",
+    "filename": "streetwear-30.jpg",
+    "path": "assets/images/streetwear/streetwear-30.jpg",
+    "sizeBytes": 37455,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-31",
+    "category": "streetwear",
+    "filename": "streetwear-31.jpg",
+    "path": "assets/images/streetwear/streetwear-31.jpg",
+    "sizeBytes": 51615,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-32",
+    "category": "streetwear",
+    "filename": "streetwear-32.jpg",
+    "path": "assets/images/streetwear/streetwear-32.jpg",
+    "sizeBytes": 49318,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-33",
+    "category": "streetwear",
+    "filename": "streetwear-33.jpg",
+    "path": "assets/images/streetwear/streetwear-33.jpg",
+    "sizeBytes": 40709,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-34",
+    "category": "streetwear",
+    "filename": "streetwear-34.jpg",
+    "path": "assets/images/streetwear/streetwear-34.jpg",
+    "sizeBytes": 93237,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-35",
+    "category": "streetwear",
+    "filename": "streetwear-35.jpg",
+    "path": "assets/images/streetwear/streetwear-35.jpg",
+    "sizeBytes": 71973,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-36",
+    "category": "streetwear",
+    "filename": "streetwear-36.jpg",
+    "path": "assets/images/streetwear/streetwear-36.jpg",
+    "sizeBytes": 139344,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-37",
+    "category": "streetwear",
+    "filename": "streetwear-37.jpg",
+    "path": "assets/images/streetwear/streetwear-37.jpg",
+    "sizeBytes": 75659,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-38",
+    "category": "streetwear",
+    "filename": "streetwear-38.jpg",
+    "path": "assets/images/streetwear/streetwear-38.jpg",
+    "sizeBytes": 119653,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-39",
+    "category": "streetwear",
+    "filename": "streetwear-39.jpg",
+    "path": "assets/images/streetwear/streetwear-39.jpg",
+    "sizeBytes": 63831,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-40",
+    "category": "streetwear",
+    "filename": "streetwear-40.jpg",
+    "path": "assets/images/streetwear/streetwear-40.jpg",
+    "sizeBytes": 62389,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-41",
+    "category": "streetwear",
+    "filename": "streetwear-41.jpg",
+    "path": "assets/images/streetwear/streetwear-41.jpg",
+    "sizeBytes": 63831,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-42",
+    "category": "streetwear",
+    "filename": "streetwear-42.jpg",
+    "path": "assets/images/streetwear/streetwear-42.jpg",
+    "sizeBytes": 112841,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-43",
+    "category": "streetwear",
+    "filename": "streetwear-43.jpg",
+    "path": "assets/images/streetwear/streetwear-43.jpg",
+    "sizeBytes": 19671,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-44",
+    "category": "streetwear",
+    "filename": "streetwear-44.jpg",
+    "path": "assets/images/streetwear/streetwear-44.jpg",
+    "sizeBytes": 51284,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-45",
+    "category": "streetwear",
+    "filename": "streetwear-45.jpg",
+    "path": "assets/images/streetwear/streetwear-45.jpg",
+    "sizeBytes": 47402,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-46",
+    "category": "streetwear",
+    "filename": "streetwear-46.jpg",
+    "path": "assets/images/streetwear/streetwear-46.jpg",
+    "sizeBytes": 102628,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-47",
+    "category": "streetwear",
+    "filename": "streetwear-47.jpg",
+    "path": "assets/images/streetwear/streetwear-47.jpg",
+    "sizeBytes": 42621,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-48",
+    "category": "streetwear",
+    "filename": "streetwear-48.jpg",
+    "path": "assets/images/streetwear/streetwear-48.jpg",
+    "sizeBytes": 124604,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-49",
+    "category": "streetwear",
+    "filename": "streetwear-49.jpg",
+    "path": "assets/images/streetwear/streetwear-49.jpg",
+    "sizeBytes": 32266,
+    "status": "success"
+  },
+  {
+    "id": "streetwear-50",
+    "category": "streetwear",
+    "filename": "streetwear-50.jpg",
+    "path": "assets/images/streetwear/streetwear-50.jpg",
+    "sizeBytes": 80662,
+    "status": "success"
+  },
+  {
+    "id": "footwear-26",
+    "category": "footwear",
+    "filename": "footwear-26.jpg",
+    "path": "assets/images/footwear/footwear-26.jpg",
+    "sizeBytes": 31301,
+    "status": "success"
+  },
+  {
+    "id": "footwear-27",
+    "category": "footwear",
+    "filename": "footwear-27.jpg",
+    "path": "assets/images/footwear/footwear-27.jpg",
+    "sizeBytes": 35601,
+    "status": "success"
+  },
+  {
+    "id": "footwear-28",
+    "category": "footwear",
+    "filename": "footwear-28.jpg",
+    "path": "assets/images/footwear/footwear-28.jpg",
+    "sizeBytes": 46732,
+    "status": "success"
+  },
+  {
+    "id": "footwear-29",
+    "category": "footwear",
+    "filename": "footwear-29.jpg",
+    "path": "assets/images/footwear/footwear-29.jpg",
+    "sizeBytes": 69472,
+    "status": "success"
+  },
+  {
+    "id": "footwear-30",
+    "category": "footwear",
+    "filename": "footwear-30.jpg",
+    "path": "assets/images/footwear/footwear-30.jpg",
+    "sizeBytes": 43222,
+    "status": "success"
+  },
+  {
+    "id": "footwear-31",
+    "category": "footwear",
+    "filename": "footwear-31.jpg",
+    "path": "assets/images/footwear/footwear-31.jpg",
+    "sizeBytes": 14897,
+    "status": "success"
+  },
+  {
+    "id": "footwear-32",
+    "category": "footwear",
+    "filename": "footwear-32.jpg",
+    "path": "assets/images/footwear/footwear-32.jpg",
+    "sizeBytes": 22617,
+    "status": "success"
+  },
+  {
+    "id": "footwear-33",
+    "category": "footwear",
+    "filename": "footwear-33.jpg",
+    "path": "assets/images/footwear/footwear-33.jpg",
+    "sizeBytes": 13815,
+    "status": "success"
+  },
+  {
+    "id": "footwear-35",
+    "category": "footwear",
+    "filename": "footwear-35.jpg",
+    "path": "assets/images/footwear/footwear-35.jpg",
+    "sizeBytes": 62102,
+    "status": "success"
+  },
+  {
+    "id": "footwear-36",
+    "category": "footwear",
+    "filename": "footwear-36.jpg",
+    "path": "assets/images/footwear/footwear-36.jpg",
+    "sizeBytes": 52269,
+    "status": "success"
+  },
+  {
+    "id": "footwear-37",
+    "category": "footwear",
+    "filename": "footwear-37.jpg",
+    "path": "assets/images/footwear/footwear-37.jpg",
+    "sizeBytes": 62042,
+    "status": "success"
+  },
+  {
+    "id": "footwear-38",
+    "category": "footwear",
+    "filename": "footwear-38.jpg",
+    "path": "assets/images/footwear/footwear-38.jpg",
+    "sizeBytes": 58690,
+    "status": "success"
+  },
+  {
+    "id": "footwear-39",
+    "category": "footwear",
+    "filename": "footwear-39.jpg",
+    "path": "assets/images/footwear/footwear-39.jpg",
+    "sizeBytes": 64134,
+    "status": "success"
+  },
+  {
+    "id": "footwear-40",
+    "category": "footwear",
+    "filename": "footwear-40.jpg",
+    "path": "assets/images/footwear/footwear-40.jpg",
+    "sizeBytes": 52085,
+    "status": "success"
+  },
+  {
+    "id": "footwear-41",
+    "category": "footwear",
+    "filename": "footwear-41.jpg",
+    "path": "assets/images/footwear/footwear-41.jpg",
+    "sizeBytes": 45883,
+    "status": "success"
+  },
+  {
+    "id": "footwear-42",
+    "category": "footwear",
+    "filename": "footwear-42.jpg",
+    "path": "assets/images/footwear/footwear-42.jpg",
+    "sizeBytes": 111058,
+    "status": "success"
+  },
+  {
+    "id": "footwear-43",
+    "category": "footwear",
+    "filename": "footwear-43.jpg",
+    "path": "assets/images/footwear/footwear-43.jpg",
+    "sizeBytes": 40005,
+    "status": "success"
+  },
+  {
+    "id": "footwear-44",
+    "category": "footwear",
+    "filename": "footwear-44.jpg",
+    "path": "assets/images/footwear/footwear-44.jpg",
+    "sizeBytes": 65461,
+    "status": "success"
+  },
+  {
+    "id": "footwear-45",
+    "category": "footwear",
+    "filename": "footwear-45.jpg",
+    "path": "assets/images/footwear/footwear-45.jpg",
+    "sizeBytes": 28798,
+    "status": "success"
+  },
+  {
+    "id": "footwear-46",
+    "category": "footwear",
+    "filename": "footwear-46.jpg",
+    "path": "assets/images/footwear/footwear-46.jpg",
+    "sizeBytes": 70904,
+    "status": "success"
+  },
+  {
+    "id": "footwear-47",
+    "category": "footwear",
+    "filename": "footwear-47.jpg",
+    "path": "assets/images/footwear/footwear-47.jpg",
+    "sizeBytes": 46646,
+    "status": "success"
+  },
+  {
+    "id": "footwear-48",
+    "category": "footwear",
+    "filename": "footwear-48.jpg",
+    "path": "assets/images/footwear/footwear-48.jpg",
+    "sizeBytes": 97552,
+    "status": "success"
+  },
+  {
+    "id": "footwear-49",
+    "category": "footwear",
+    "filename": "footwear-49.jpg",
+    "path": "assets/images/footwear/footwear-49.jpg",
+    "sizeBytes": 38302,
+    "status": "success"
+  },
+  {
+    "id": "footwear-50",
+    "category": "footwear",
+    "filename": "footwear-50.jpg",
+    "path": "assets/images/footwear/footwear-50.jpg",
+    "sizeBytes": 70553,
+    "status": "success"
+  },
+  {
+    "id": "accessories-26",
+    "category": "accessories",
+    "filename": "accessories-26.jpg",
+    "path": "assets/images/accessories/accessories-26.jpg",
+    "sizeBytes": 39104,
+    "status": "success"
+  },
+  {
+    "id": "accessories-27",
+    "category": "accessories",
+    "filename": "accessories-27.jpg",
+    "path": "assets/images/accessories/accessories-27.jpg",
+    "sizeBytes": 50713,
+    "status": "success"
+  },
+  {
+    "id": "accessories-28",
+    "category": "accessories",
+    "filename": "accessories-28.jpg",
+    "path": "assets/images/accessories/accessories-28.jpg",
+    "sizeBytes": 18259,
+    "status": "success"
+  },
+  {
+    "id": "accessories-29",
+    "category": "accessories",
+    "filename": "accessories-29.jpg",
+    "path": "assets/images/accessories/accessories-29.jpg",
+    "sizeBytes": 22868,
+    "status": "success"
+  },
+  {
+    "id": "accessories-30",
+    "category": "accessories",
+    "filename": "accessories-30.jpg",
+    "path": "assets/images/accessories/accessories-30.jpg",
+    "sizeBytes": 28840,
+    "status": "success"
+  },
+  {
+    "id": "accessories-31",
+    "category": "accessories",
+    "filename": "accessories-31.jpg",
+    "path": "assets/images/accessories/accessories-31.jpg",
+    "sizeBytes": 50934,
+    "status": "success"
+  },
+  {
+    "id": "accessories-32",
+    "category": "accessories",
+    "filename": "accessories-32.jpg",
+    "path": "assets/images/accessories/accessories-32.jpg",
+    "sizeBytes": 16894,
+    "status": "success"
+  },
+  {
+    "id": "accessories-33",
+    "category": "accessories",
+    "filename": "accessories-33.jpg",
+    "path": "assets/images/accessories/accessories-33.jpg",
+    "sizeBytes": 37121,
+    "status": "success"
+  },
+  {
+    "id": "accessories-34",
+    "category": "accessories",
+    "filename": "accessories-34.jpg",
+    "path": "assets/images/accessories/accessories-34.jpg",
+    "sizeBytes": 14705,
+    "status": "success"
+  },
+  {
+    "id": "accessories-35",
+    "category": "accessories",
+    "filename": "accessories-35.jpg",
+    "path": "assets/images/accessories/accessories-35.jpg",
+    "sizeBytes": 45652,
+    "status": "success"
+  },
+  {
+    "id": "accessories-36",
+    "category": "accessories",
+    "filename": "accessories-36.jpg",
+    "path": "assets/images/accessories/accessories-36.jpg",
+    "sizeBytes": 90940,
+    "status": "success"
+  },
+  {
+    "id": "accessories-37",
+    "category": "accessories",
+    "filename": "accessories-37.jpg",
+    "path": "assets/images/accessories/accessories-37.jpg",
+    "sizeBytes": 50063,
+    "status": "success"
+  },
+  {
+    "id": "accessories-38",
+    "category": "accessories",
+    "filename": "accessories-38.jpg",
+    "path": "assets/images/accessories/accessories-38.jpg",
+    "sizeBytes": 58600,
+    "status": "success"
+  },
+  {
+    "id": "accessories-39",
+    "category": "accessories",
+    "filename": "accessories-39.jpg",
+    "path": "assets/images/accessories/accessories-39.jpg",
+    "sizeBytes": 53917,
+    "status": "success"
+  },
+  {
+    "id": "accessories-40",
+    "category": "accessories",
+    "filename": "accessories-40.jpg",
+    "path": "assets/images/accessories/accessories-40.jpg",
+    "sizeBytes": 57570,
+    "status": "success"
+  },
+  {
+    "id": "accessories-41",
+    "category": "accessories",
+    "filename": "accessories-41.jpg",
+    "path": "assets/images/accessories/accessories-41.jpg",
+    "sizeBytes": 45447,
+    "status": "success"
+  },
+  {
+    "id": "accessories-42",
+    "category": "accessories",
+    "filename": "accessories-42.jpg",
+    "path": "assets/images/accessories/accessories-42.jpg",
+    "sizeBytes": 52220,
+    "status": "success"
+  },
+  {
+    "id": "accessories-43",
+    "category": "accessories",
+    "filename": "accessories-43.jpg",
+    "path": "assets/images/accessories/accessories-43.jpg",
+    "sizeBytes": 32111,
+    "status": "success"
+  },
+  {
+    "id": "accessories-44",
+    "category": "accessories",
+    "filename": "accessories-44.jpg",
+    "path": "assets/images/accessories/accessories-44.jpg",
+    "sizeBytes": 50391,
+    "status": "success"
+  },
+  {
+    "id": "accessories-45",
+    "category": "accessories",
+    "filename": "accessories-45.jpg",
+    "path": "assets/images/accessories/accessories-45.jpg",
+    "sizeBytes": 55247,
+    "status": "success"
+  },
+  {
+    "id": "accessories-46",
+    "category": "accessories",
+    "filename": "accessories-46.jpg",
+    "path": "assets/images/accessories/accessories-46.jpg",
+    "sizeBytes": 64709,
+    "status": "success"
+  },
+  {
+    "id": "accessories-47",
+    "category": "accessories",
+    "filename": "accessories-47.jpg",
+    "path": "assets/images/accessories/accessories-47.jpg",
+    "sizeBytes": 58830,
+    "status": "success"
+  },
+  {
+    "id": "accessories-48",
+    "category": "accessories",
+    "filename": "accessories-48.jpg",
+    "path": "assets/images/accessories/accessories-48.jpg",
+    "sizeBytes": 101155,
+    "status": "success"
+  },
+  {
+    "id": "accessories-49",
+    "category": "accessories",
+    "filename": "accessories-49.jpg",
+    "path": "assets/images/accessories/accessories-49.jpg",
+    "sizeBytes": 27834,
+    "status": "success"
+  },
+  {
+    "id": "accessories-50",
+    "category": "accessories",
+    "filename": "accessories-50.jpg",
+    "path": "assets/images/accessories/accessories-50.jpg",
+    "sizeBytes": 67005,
+    "status": "success"
+  },
+  {
+    "id": "footwear-34",
+    "category": "footwear",
+    "filename": "footwear-34.jpg",
+    "path": "assets/images/footwear/footwear-34.jpg",
+    "sizeBytes": 54453,
+    "status": "success"
   }
 ]

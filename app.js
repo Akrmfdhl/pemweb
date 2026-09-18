@@ -217,6 +217,387 @@ const cardExpiryInput = document.getElementById('cardExpiry');
 const payMethodTabs = document.querySelectorAll('.pay-method-tab');
 const bankPills = document.querySelectorAll('.bank-pill');
 
+const splashScreenEl = document.getElementById('splashScreen');
+const splashProgressBar = document.getElementById('splashProgressBar');
+const splashProgressText = document.getElementById('splashProgressText');
+
+const authNavContainer = document.getElementById('authNavContainer');
+
+const authModalEl = document.getElementById('authModal');
+const authModalBackdropEl = document.getElementById('authModalBackdrop');
+const closeAuthModalBtn = document.getElementById('closeAuthModalBtn');
+const tabLoginBtn = document.getElementById('tabLoginBtn');
+const tabRegisterBtn = document.getElementById('tabRegisterBtn');
+const loginTabPane = document.getElementById('loginTabPane');
+const registerTabPane = document.getElementById('registerTabPane');
+const authNoticeBanner = document.getElementById('authNoticeBanner');
+const authNoticeText = document.getElementById('authNoticeText');
+const authModalTitle = document.getElementById('authModalTitle');
+
+const loginForm = document.getElementById('loginForm');
+const loginIdentityInput = document.getElementById('loginIdentity');
+const loginPasswordInput = document.getElementById('loginPassword');
+const toggleLoginPassBtn = document.getElementById('toggleLoginPassBtn');
+const switchToRegisterBtn = document.getElementById('switchToRegisterBtn');
+
+const registerForm = document.getElementById('registerForm');
+const regFullNameInput = document.getElementById('regFullName');
+const regEmailInput = document.getElementById('regEmail');
+const regPhoneInput = document.getElementById('regPhone');
+const regPasswordInput = document.getElementById('regPassword');
+const regConfirmPasswordInput = document.getElementById('regConfirmPassword');
+const toggleRegPassBtn = document.getElementById('toggleRegPassBtn');
+const regTermsCheckbox = document.getElementById('regTerms');
+const strengthSeg1 = document.getElementById('strengthSeg1');
+const strengthSeg2 = document.getElementById('strengthSeg2');
+const strengthSeg3 = document.getElementById('strengthSeg3');
+const strengthLabelText = document.getElementById('strengthLabelText');
+const switchToLoginBtn = document.getElementById('switchToLoginBtn');
+
+const profileDrawerEl = document.getElementById('profileDrawer');
+const profileDrawerBackdropEl = document.getElementById('profileDrawerBackdrop');
+const closeProfileDrawerBtn = document.getElementById('closeProfileDrawerBtn');
+const profileLargeAvatar = document.getElementById('profileLargeAvatar');
+const profileDrawerName = document.getElementById('profileDrawerName');
+const profileDrawerEmail = document.getElementById('profileDrawerEmail');
+const profileJoinDate = document.getElementById('profileJoinDate');
+const profilePointsVal = document.getElementById('profilePointsVal');
+const orderCountBadge = document.getElementById('orderCountBadge');
+const orderHistoryContainer = document.getElementById('orderHistoryContainer');
+const signOutBtn = document.getElementById('signOutBtn');
+
+const DEFAULT_USER = {
+  id: 'usr-alex-1',
+  name: 'Alex Pratama',
+  email: 'alex@gmail.com',
+  phone: '+62 812-3456-7890',
+  password: 'password123',
+  tier: 'VIP Gold Member',
+  vibePoints: 250,
+  joinedDate: 'March 2026'
+};
+
+const DEFAULT_ORDERS = [
+  {
+    id: '#SV-89421',
+    date: 'March 14, 2026',
+    status: 'Delivered',
+    items: 'Acid-Wash Oversized Denim Jacket (Size L), Modular Utility Vest (Size M)',
+    total: '$213.00'
+  },
+  {
+    id: '#SV-76120',
+    date: 'February 28, 2026',
+    status: 'Delivered',
+    items: 'Vibe Platform Cushion Sneakers (Size 42)',
+    total: '$125.00'
+  }
+];
+
+function getUsers() {
+  try {
+    const raw = localStorage.getItem('shopvibe_users');
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    }
+  } catch (e) {}
+  const initial = [DEFAULT_USER];
+  try {
+    localStorage.setItem('shopvibe_users', JSON.stringify(initial));
+  } catch (e) {}
+  return initial;
+}
+
+function saveUsers(users) {
+  try {
+    localStorage.setItem('shopvibe_users', JSON.stringify(users));
+  } catch (e) {}
+}
+
+function getActiveSession() {
+  try {
+    const raw = localStorage.getItem('shopvibe_active_session');
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return null;
+}
+
+function setActiveSession(user) {
+  try {
+    if (user) {
+      localStorage.setItem('shopvibe_active_session', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('shopvibe_active_session');
+    }
+  } catch (e) {}
+}
+
+function isAuthenticated() {
+  return !!getActiveSession();
+}
+
+function checkAuthGuard(callback) {
+  if (isAuthenticated()) {
+    if (typeof callback === 'function') callback();
+    return true;
+  }
+  openAuthModal('login', 'Silakan masuk ke akun VIP Anda untuk mulai berbelanja koleksi ShopVibe.');
+  showToast('Silakan masuk ke akun VIP Anda untuk mulai berbelanja koleksi ShopVibe.', 'info');
+  return false;
+}
+
+function initSplashScreen() {
+  if (!splashScreenEl) return;
+
+  const isShown = sessionStorage.getItem('splash_shown');
+  if (isShown === 'true') {
+    splashScreenEl.style.display = 'none';
+    return;
+  }
+
+  const duration = 1500;
+  const startTime = performance.now();
+
+  function updateProgress(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(1, elapsed / duration);
+    const percent = Math.round(progress * 100);
+
+    if (splashProgressBar) {
+      splashProgressBar.style.width = `${percent}%`;
+    }
+    if (splashProgressText) {
+      splashProgressText.textContent = `${percent}%`;
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(updateProgress);
+    } else {
+      try {
+        sessionStorage.setItem('splash_shown', 'true');
+      } catch (e) {}
+      splashScreenEl.classList.add('fade-out');
+      setTimeout(() => {
+        splashScreenEl.style.display = 'none';
+      }, 500);
+    }
+  }
+
+  requestAnimationFrame(updateProgress);
+}
+
+function renderAuthNav() {
+  if (!authNavContainer) return;
+  const activeUser = getActiveSession();
+
+  if (activeUser) {
+    const initial = activeUser.name ? activeUser.name.charAt(0).toUpperCase() : 'V';
+    const firstName = activeUser.name ? activeUser.name.split(' ')[0] : 'Member';
+    authNavContainer.innerHTML = `
+      <button type="button" id="navProfileBtn" class="nav-profile-btn tooltip" data-tooltip="VIP Member Lounge" aria-label="Open VIP Profile">
+        <div class="user-avatar" id="navUserAvatar">${initial}</div>
+        <div class="nav-user-info">
+          <span class="nav-user-greeting" id="navUserGreeting">Hi, ${firstName}</span>
+          <span class="vip-badge-pill">VIP Member</span>
+        </div>
+      </button>
+    `;
+    const navProfileBtn = document.getElementById('navProfileBtn');
+    if (navProfileBtn) {
+      navProfileBtn.addEventListener('click', openProfileDrawer);
+    }
+  } else {
+    authNavContainer.innerHTML = `
+      <button type="button" id="navAuthBtn" class="btn btn-secondary btn-sm nav-auth-btn" aria-label="Sign In or Join VIP">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Sign In / Join VIP</span>
+      </button>
+    `;
+    const navAuthBtn = document.getElementById('navAuthBtn');
+    if (navAuthBtn) {
+      navAuthBtn.addEventListener('click', () => openAuthModal('login'));
+    }
+  }
+}
+
+function openAuthModal(tab = 'login', noticeText = '') {
+  if (!authModalEl || !authModalBackdropEl) return;
+
+  switchAuthTab(tab);
+
+  if (noticeText && authNoticeBanner && authNoticeText) {
+    authNoticeText.textContent = noticeText;
+    authNoticeBanner.style.display = 'flex';
+  } else if (authNoticeBanner) {
+    authNoticeBanner.style.display = 'none';
+  }
+
+  authModalEl.classList.add('active');
+  authModalBackdropEl.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAuthModal() {
+  if (!authModalEl || !authModalBackdropEl) return;
+  authModalEl.classList.remove('active');
+  authModalBackdropEl.classList.remove('active');
+  document.body.style.overflow = '';
+  if (authNoticeBanner) authNoticeBanner.style.display = 'none';
+}
+
+function switchAuthTab(tab) {
+  if (tab === 'register') {
+    tabLoginBtn?.classList.remove('active');
+    tabRegisterBtn?.classList.add('active');
+    loginTabPane?.classList.remove('active');
+    registerTabPane?.classList.add('active');
+    if (authModalTitle) authModalTitle.textContent = 'Create VIP Account';
+  } else {
+    tabRegisterBtn?.classList.remove('active');
+    tabLoginBtn?.classList.add('active');
+    registerTabPane?.classList.remove('active');
+    loginTabPane?.classList.add('active');
+    if (authModalTitle) authModalTitle.textContent = 'Welcome to VIP Access';
+  }
+}
+
+function evaluatePasswordStrength(password) {
+  if (!password) return { score: 0, label: 'None' };
+  let score = 0;
+  if (password.length >= 6) score++;
+  if (password.length >= 8) score++;
+  if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
+  if (/\d/.test(password)) score++;
+  if (/[^A-Za-z0-9]/.test(password)) score++;
+
+  if (score <= 1) return { score: 1, label: 'Weak' };
+  if (score <= 3) return { score: 2, label: 'Medium' };
+  return { score: 3, label: 'Strong' };
+}
+
+function updatePasswordStrengthDisplay() {
+  const pwd = regPasswordInput?.value || '';
+  const { score, label } = evaluatePasswordStrength(pwd);
+
+  if (strengthLabelText) strengthLabelText.textContent = label;
+
+  strengthSeg1?.classList.remove('active-weak', 'active-medium', 'active-strong');
+  strengthSeg2?.classList.remove('active-weak', 'active-medium', 'active-strong');
+  strengthSeg3?.classList.remove('active-weak', 'active-medium', 'active-strong');
+
+  if (score === 1) {
+    strengthSeg1?.classList.add('active-weak');
+  } else if (score === 2) {
+    strengthSeg1?.classList.add('active-medium');
+    strengthSeg2?.classList.add('active-medium');
+  } else if (score === 3) {
+    strengthSeg1?.classList.add('active-strong');
+    strengthSeg2?.classList.add('active-strong');
+    strengthSeg3?.classList.add('active-strong');
+  }
+}
+
+function togglePasswordVisibility(inputEl, btnEl) {
+  if (!inputEl || !btnEl) return;
+  const isPass = inputEl.type === 'password';
+  inputEl.type = isPass ? 'text' : 'password';
+  const showIcon = btnEl.querySelector('.eye-show');
+  const hideIcon = btnEl.querySelector('.eye-hide');
+  if (showIcon && hideIcon) {
+    showIcon.style.display = isPass ? 'none' : 'block';
+    hideIcon.style.display = isPass ? 'block' : 'none';
+  }
+}
+
+function getUserOrders(userId) {
+  try {
+    const raw = localStorage.getItem(`shopvibe_orders_${userId}`);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return parsed;
+    }
+  } catch (e) {}
+  try {
+    localStorage.setItem(`shopvibe_orders_${userId}`, JSON.stringify(DEFAULT_ORDERS));
+  } catch (e) {}
+  return [...DEFAULT_ORDERS];
+}
+
+function saveUserOrders(userId, orders) {
+  try {
+    localStorage.setItem(`shopvibe_orders_${userId}`, JSON.stringify(orders));
+  } catch (e) {}
+}
+
+function openProfileDrawer() {
+  const activeUser = getActiveSession();
+  if (!activeUser) {
+    openAuthModal('login');
+    return;
+  }
+
+  if (profileLargeAvatar) profileLargeAvatar.textContent = activeUser.name ? activeUser.name.charAt(0).toUpperCase() : 'V';
+  if (profileDrawerName) profileDrawerName.textContent = activeUser.name || 'VIP Member';
+  if (profileDrawerEmail) profileDrawerEmail.textContent = activeUser.email || '';
+  if (profileJoinDate) profileJoinDate.textContent = `Member since: ${activeUser.joinedDate || 'March 2026'}`;
+  if (profilePointsVal) profilePointsVal.textContent = `${activeUser.vibePoints || 250} PTS`;
+
+  const orders = getUserOrders(activeUser.id);
+  if (orderCountBadge) orderCountBadge.textContent = `${orders.length} Pesanan`;
+
+  if (orderHistoryContainer) {
+    if (orders.length === 0) {
+      orderHistoryContainer.innerHTML = `
+        <div class="empty-state" style="padding: 24px 12px;">
+          <p style="font-size: 13px; color: var(--color-text-muted);">Belum ada riwayat transaksi.</p>
+        </div>
+      `;
+    } else {
+      orderHistoryContainer.innerHTML = orders.map(ord => {
+        let statusClass = 'status-delivered';
+        if (ord.status === 'In Transit') statusClass = 'status-transit';
+        if (ord.status === 'Processing') statusClass = 'status-processing';
+
+        return `
+          <div class="order-card">
+            <div class="order-card-top">
+              <span class="order-card-id">${ord.id}</span>
+              <span class="order-status-pill ${statusClass}">${ord.status}</span>
+            </div>
+            <div class="order-card-date">${ord.date}</div>
+            <div class="order-card-items">${ord.items}</div>
+            <div class="order-card-total">
+              <span>Total Pembayaran:</span>
+              <strong>${ord.total}</strong>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  }
+
+  profileDrawerEl?.classList.add('active');
+  profileDrawerBackdropEl?.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProfileDrawer() {
+  profileDrawerEl?.classList.remove('active');
+  profileDrawerBackdropEl?.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function signOut() {
+  setActiveSession(null);
+  closeProfileDrawer();
+  renderAuthNav();
+  showToast('Anda telah keluar. Mode penjelajahan tamu aktif.', 'info');
+}
+
 function showToast(message, type = 'success') {
   const toast = document.createElement('div');
   toast.className = `toast-item toast-${type}`;
@@ -677,8 +1058,16 @@ function populateReviewStep() {
   totalEl.textContent = `$${total.toFixed(2)}`;
 }
 
-cartToggleBtn.addEventListener('click', openDrawer);
-floatingCartBtn.addEventListener('click', openDrawer);
+cartToggleBtn.addEventListener('click', () => {
+  if (!checkAuthGuard()) return;
+  openDrawer();
+});
+
+floatingCartBtn.addEventListener('click', () => {
+  if (!checkAuthGuard()) return;
+  openDrawer();
+});
+
 closeDrawerBtn.addEventListener('click', closeDrawer);
 drawerBackdropEl.addEventListener('click', closeDrawer);
 
@@ -698,12 +1087,15 @@ document.addEventListener('keydown', (e) => {
     if (cartDrawerEl.classList.contains('active')) closeDrawer();
     if (quickViewModal.classList.contains('active')) closeQuickView();
     if (checkoutModal.classList.contains('active')) closeCheckoutModal();
+    if (authModalEl && authModalEl.classList.contains('active')) closeAuthModal();
+    if (profileDrawerEl && profileDrawerEl.classList.contains('active')) closeProfileDrawer();
   }
 });
 
 productsGridEl.addEventListener('click', (e) => {
   const addBtn = e.target.closest('[data-action="add"]');
   if (addBtn) {
+    if (!checkAuthGuard()) return;
     const id = addBtn.dataset.id;
     addToCart(id, 'M');
     return;
@@ -711,6 +1103,7 @@ productsGridEl.addEventListener('click', (e) => {
 
   const quickViewBtn = e.target.closest('[data-action="quickview"]');
   if (quickViewBtn) {
+    if (!checkAuthGuard()) return;
     const id = quickViewBtn.dataset.id;
     openQuickView(id);
   }
@@ -743,6 +1136,7 @@ cartItemsContainer.addEventListener('change', (e) => {
 });
 
 modalAddToCartBtn.addEventListener('click', () => {
+  if (!checkAuthGuard()) return;
   if (!state.activeModalProduct) return;
   const selectedSize = document.querySelector('input[name="modalSize"]:checked')?.value || 'M';
   addToCart(state.activeModalProduct.id, selectedSize);
@@ -836,10 +1230,12 @@ applyPromoBtn.addEventListener('click', () => {
 });
 
 wishlistBtn.addEventListener('click', () => {
+  if (!checkAuthGuard()) return;
   showToast('Wishlist feature synced to your profile.', 'info');
 });
 
 heroPromoBtn.addEventListener('click', () => {
+  if (!checkAuthGuard()) return;
   promoCodeInput.value = 'VIBE20';
   state.promoCode = 'VIBE20';
   state.discountPercent = 20;
@@ -989,6 +1385,20 @@ placeOrderBtn.addEventListener('click', () => {
     document.getElementById('confirmedEmail').textContent = state.shippingData.email;
     document.getElementById('confirmedTotal').textContent = totalPaid;
 
+    const activeUser = getActiveSession();
+    if (activeUser) {
+      const orders = getUserOrders(activeUser.id);
+      const itemsSummary = state.cart.map(i => `${i.name} (${i.size})`).join(', ');
+      orders.unshift({
+        id: '#' + randomOrderId,
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        status: 'Processing',
+        items: itemsSummary || 'Streetwear Seasonal Drop',
+        total: totalPaid
+      });
+      saveUserOrders(activeUser.id, orders);
+    }
+
     state.cart = [];
     saveCartToStorage();
     renderCartDrawer();
@@ -1006,5 +1416,120 @@ printReceiptBtn.addEventListener('click', () => {
   window.print();
 });
 
+tabLoginBtn?.addEventListener('click', () => switchAuthTab('login'));
+tabRegisterBtn?.addEventListener('click', () => switchAuthTab('register'));
+
+switchToRegisterBtn?.addEventListener('click', () => switchAuthTab('register'));
+switchToLoginBtn?.addEventListener('click', () => switchAuthTab('login'));
+
+toggleLoginPassBtn?.addEventListener('click', () => togglePasswordVisibility(loginPasswordInput, toggleLoginPassBtn));
+toggleRegPassBtn?.addEventListener('click', () => togglePasswordVisibility(regPasswordInput, toggleRegPassBtn));
+
+regPasswordInput?.addEventListener('input', updatePasswordStrengthDisplay);
+
+loginForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const identity = loginIdentityInput?.value.trim().toLowerCase();
+  const password = loginPasswordInput?.value;
+
+  if (!identity || !password) {
+    showToast('Silakan isi email/username dan password.', 'error');
+    return;
+  }
+
+  const users = getUsers();
+  const user = users.find(u => 
+    u.email.toLowerCase() === identity || 
+    u.name.toLowerCase() === identity || 
+    (u.name.toLowerCase().replace(/\s+/g, '') === identity)
+  );
+
+  if (!user || user.password !== password) {
+    showToast('Email atau password tidak sesuai. Silakan coba lagi.', 'error');
+    return;
+  }
+
+  setActiveSession(user);
+  closeAuthModal();
+  renderAuthNav();
+  showToast(`Selamat datang kembali, ${user.name}!`, 'success');
+});
+
+registerForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = regFullNameInput?.value.trim();
+  const email = regEmailInput?.value.trim();
+  const phone = regPhoneInput?.value.trim();
+  const password = regPasswordInput?.value;
+  const confirmPassword = regConfirmPasswordInput?.value;
+  const terms = regTermsCheckbox?.checked;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!name || !email || !phone || !password || !confirmPassword) {
+    showToast('Harap lengkapi semua bidang registrasi.', 'error');
+    return;
+  }
+
+  if (!emailRegex.test(email)) {
+    showToast('Format email tidak valid.', 'error');
+    return;
+  }
+
+  if (password.length < 6) {
+    showToast('Password minimal harus 6 karakter.', 'error');
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    showToast('Konfirmasi kata sandi tidak cocok.', 'error');
+    return;
+  }
+
+  if (!terms) {
+    showToast('Anda harus menyetujui Syarat & Ketentuan VIP.', 'error');
+    return;
+  }
+
+  const users = getUsers();
+  const existing = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+  if (existing) {
+    showToast('Email ini telah terdaftar. Silakan masuk.', 'error');
+    switchAuthTab('login');
+    if (loginIdentityInput) loginIdentityInput.value = email;
+    return;
+  }
+
+  const newUser = {
+    id: 'usr-' + Date.now(),
+    name,
+    email,
+    phone,
+    password,
+    tier: 'VIP Gold Member',
+    vibePoints: 250,
+    joinedDate: new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+  };
+
+  users.push(newUser);
+  saveUsers(users);
+  setActiveSession(newUser);
+
+  registerForm.reset();
+  updatePasswordStrengthDisplay();
+  closeAuthModal();
+  renderAuthNav();
+  showToast(`Selamat bergabung di VIP Club, ${newUser.name}!`, 'success');
+});
+
+closeAuthModalBtn?.addEventListener('click', closeAuthModal);
+authModalBackdropEl?.addEventListener('click', closeAuthModal);
+
+closeProfileDrawerBtn?.addEventListener('click', closeProfileDrawer);
+profileDrawerBackdropEl?.addEventListener('click', closeProfileDrawer);
+signOutBtn?.addEventListener('click', signOut);
+
+initSplashScreen();
+renderAuthNav();
 renderProducts();
 renderCartDrawer();

@@ -10,6 +10,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="splashScreen" class="splash-screen" role="status" aria-label="Loading ShopVibe">
+    <div class="splash-container">
+      <div class="splash-glow"></div>
+      <div class="splash-logo">
+        <span class="splash-logo-text">ShopVibe</span>
+        <span class="splash-logo-badge">2026</span>
+      </div>
+      <p class="splash-tagline">Trendy &bull; Energetic &bull; Conversion-Focused</p>
+      <div class="splash-progress-wrapper">
+        <div class="splash-progress-track">
+          <div id="splashProgressBar" class="splash-progress-bar"></div>
+        </div>
+        <div class="splash-progress-meta">
+          <span class="splash-status-text">INITIALIZING COLLECTION</span>
+          <span id="splashProgressText" class="splash-progress-percent">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <aside class="top-announcement" role="region" aria-label="Special Offer">
     <span>Limited Drop: Use code <code>VIBE20</code> for 20% OFF — Free express shipping over $75</span>
   </aside>
@@ -57,6 +77,16 @@
           </svg>
           <span class="badge-count" id="cartCountBadge">0</span>
         </button>
+
+        <div id="authNavContainer" class="auth-nav-container">
+          <button type="button" id="navAuthBtn" class="btn btn-secondary btn-sm nav-auth-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Sign In / Join VIP</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -148,6 +178,79 @@
             <div class="feature-info">
               <h4>30-Day Hassle-Free Returns</h4>
               <p>Simple prepaid return labels with immediate refund release.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand-story" class="brand-story-section">
+      <div class="container">
+        <div class="brand-story-grid">
+          <div class="brand-story-content">
+            <span class="overline">The ShopVibe Philosophy</span>
+            <h2 class="brand-story-title">Engineered for Daily Mobility. Driven by Raw Expression.</h2>
+            <p class="brand-story-lead">
+              ShopVibe lahir dari komitmen untuk tidak berkompromi antara ketahanan pakaian tingkat tinggi dan estetika streetwear modern. Kami merancang pakaian yang siap melibas ritme cepat perkotaan dengan karakter visual yang berani.
+            </p>
+            <p class="brand-story-text">
+              Komitmen kami berakar pada 100% Organic Heavy-Gauge Cotton — bebas degradasi sintetis, ramah lingkungan, dan ramah kulit. Filosofi desain kami memadukan minimalis fungsional dengan aksen warna energik untuk mereka yang menolak tampil biasa.
+            </p>
+
+            <div class="brand-pillars-grid">
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="pillar-info">
+                  <h4>Ethical Craft</h4>
+                  <p>Rantai pasok transparan, penjahit tersertifikasi adil, dan pewarna nabati non-toksik tanpa eksploitasi.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <div class="pillar-info">
+                  <h4>Heavy Textiles</h4>
+                  <p>Tenunan katun preshrunk 320gsm - 480gsm standar militer yang tahan dicuci ratusan kali tanpa melar.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                  </svg>
+                </div>
+                <div class="pillar-info">
+                  <h4>Zero Waste</h4>
+                  <p>Pola potong sirkular terkomputasi dan kemasan terurai 100% untuk meminimalkan jejak karbon lingkungan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brand-story-visual">
+            <div class="lookbook-collage">
+              <div class="lookbook-main-img-wrap">
+                <img src="assets/images/streetwear/streetwear-05.jpg" alt="ShopVibe Editorial Lookbook" class="lookbook-main-img" width="600" height="750" loading="lazy">
+                <div class="lookbook-tag-pill">LOOKBOOK ISSUE 04 &bull; SUMMER '26</div>
+              </div>
+              <div class="lookbook-sub-card">
+                <img src="assets/images/streetwear/streetwear-12.jpg" alt="Tailored Mobility Piece" class="lookbook-sub-img" width="300" height="380" loading="lazy">
+                <div class="lookbook-quote-box">
+                  <span class="lookbook-badge-accent">EST. 2026</span>
+                  <p class="lookbook-quote-text">"Built for those who demand visual punch and relentless durability."</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -623,6 +726,225 @@
       </div>
     </div>
   </div>
+
+  <div id="authModalBackdrop" class="modal-backdrop" tabindex="-1"></div>
+  <div id="authModal" class="modal-dialog auth-modal" role="dialog" aria-modal="true" aria-label="VIP Authentication">
+    <div class="auth-modal-content">
+      <button type="button" id="closeAuthModalBtn" class="close-btn modal-close-trigger" aria-label="Close authentication modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="auth-header">
+        <div class="auth-brand-badge">
+          <span>ShopVibe VIP Club</span>
+        </div>
+        <h3 id="authModalTitle" class="auth-modal-title">Welcome to VIP Access</h3>
+        <p class="auth-modal-desc">Masuk atau bergabung dengan VIP Club untuk mengakses drop eksklusif dan diskon member.</p>
+      </div>
+
+      <div class="auth-tabs-row" role="tablist">
+        <button type="button" class="auth-tab-btn active" id="tabLoginBtn" role="tab" aria-selected="true" data-tab="login">Masuk (Sign In)</button>
+        <button type="button" class="auth-tab-btn" id="tabRegisterBtn" role="tab" aria-selected="false" data-tab="register">Buat Akun (Join VIP)</button>
+      </div>
+
+      <div id="authNoticeBanner" class="auth-notice-banner" style="display: none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span id="authNoticeText">Silakan masuk ke akun VIP Anda untuk mulai berbelanja koleksi ShopVibe.</span>
+      </div>
+
+      <div id="loginTabPane" class="auth-tab-pane active" role="tabpanel">
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="form-field">
+            <label for="loginIdentity" class="form-label">Email atau Username *</label>
+            <input type="text" id="loginIdentity" class="input-field" placeholder="alex@gmail.com / alex" required autocomplete="username">
+          </div>
+
+          <div class="form-field">
+            <div class="form-label-row">
+              <label for="loginPassword" class="form-label">Password *</label>
+            </div>
+            <div class="input-icon-wrap">
+              <input type="password" id="loginPassword" class="input-field" placeholder="••••••••" required autocomplete="current-password">
+              <button type="button" id="toggleLoginPassBtn" class="toggle-pass-btn" aria-label="Toggle password visibility">
+                <svg class="eye-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-hide" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-field-row">
+            <label class="checkbox-control">
+              <input type="checkbox" id="loginRememberMe" class="checkbox-native" checked>
+              <span class="custom-checkbox">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Ingat Saya (Remember Me)</span>
+            </label>
+          </div>
+
+          <button type="submit" id="submitLoginBtn" class="btn btn-primary btn-lg auth-submit-btn">Masuk ke Akun VIP</button>
+
+          <div class="auth-footer-prompt">
+            <span>Belum memiliki akun VIP?</span>
+            <button type="button" id="switchToRegisterBtn" class="link-btn">Daftar VIP Sekarang</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="registerTabPane" class="auth-tab-pane" role="tabpanel">
+        <form id="registerForm" class="auth-form" novalidate>
+          <div class="form-field">
+            <label for="regFullName" class="form-label">Nama Lengkap *</label>
+            <input type="text" id="regFullName" class="input-field" placeholder="Alex Pratama" required autocomplete="name">
+          </div>
+
+          <div class="form-field">
+            <label for="regEmail" class="form-label">Email Terdaftar *</label>
+            <input type="email" id="regEmail" class="input-field" placeholder="alex@gmail.com" required autocomplete="email">
+          </div>
+
+          <div class="form-field">
+            <label for="regPhone" class="form-label">Nomor Telepon *</label>
+            <input type="tel" id="regPhone" class="input-field" placeholder="+62 812-3456-7890" required autocomplete="tel">
+          </div>
+
+          <div class="form-field">
+            <label for="regPassword" class="form-label">Password *</label>
+            <div class="input-icon-wrap">
+              <input type="password" id="regPassword" class="input-field" placeholder="Minimal 6 karakter" required autocomplete="new-password">
+              <button type="button" id="toggleRegPassBtn" class="toggle-pass-btn" aria-label="Toggle password visibility">
+                <svg class="eye-show" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-hide" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+
+            <div class="pass-strength-meter">
+              <div class="pass-strength-bars">
+                <div class="strength-bar-seg" id="strengthSeg1"></div>
+                <div class="strength-bar-seg" id="strengthSeg2"></div>
+                <div class="strength-bar-seg" id="strengthSeg3"></div>
+              </div>
+              <div class="pass-strength-label">
+                <span>Kekuatan Kata Sandi:</span>
+                <strong id="strengthLabelText">None</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="regConfirmPassword" class="form-label">Konfirmasi Ulang Password *</label>
+            <input type="password" id="regConfirmPassword" class="input-field" placeholder="Ulangi password di atas" required autocomplete="new-password">
+          </div>
+
+          <div class="form-field-row">
+            <label class="checkbox-control">
+              <input type="checkbox" id="regTerms" class="checkbox-native" required>
+              <span class="custom-checkbox">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Saya menyetujui Syarat &amp; Ketentuan Anggota VIP ShopVibe</span>
+            </label>
+          </div>
+
+          <button type="submit" id="submitRegisterBtn" class="btn btn-primary btn-lg auth-submit-btn">Gabung VIP Sekarang</button>
+
+          <div class="auth-footer-prompt">
+            <span>Sudah memiliki akun VIP?</span>
+            <button type="button" id="switchToLoginBtn" class="link-btn">Masuk ke Akun</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="profileDrawerBackdrop" class="drawer-backdrop" tabindex="-1"></div>
+  <aside id="profileDrawer" class="cart-drawer profile-drawer" role="dialog" aria-modal="true" aria-label="VIP Member Lounge">
+    <div class="drawer-header">
+      <h3>
+        <span>VIP Member Lounge</span>
+        <span class="vip-badge-pill">ACTIVE</span>
+      </h3>
+      <button type="button" id="closeProfileDrawerBtn" class="close-btn" aria-label="Close profile drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="profile-drawer-body">
+      <div class="profile-card">
+        <div class="profile-avatar-large" id="profileLargeAvatar">A</div>
+        <div class="profile-meta-details">
+          <h4 id="profileDrawerName" class="profile-user-name">Alex Pratama</h4>
+          <p id="profileDrawerEmail" class="profile-user-email">alex@gmail.com</p>
+          <div class="profile-tier-row">
+            <span class="vip-tier-badge">VIP Gold Member</span>
+            <span id="profileJoinDate" class="profile-join-date">Member since: March 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="loyalty-points-card">
+        <div class="loyalty-header">
+          <div class="loyalty-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="loyalty-titles">
+            <span class="loyalty-sub">Vibe Points Balance</span>
+            <strong class="loyalty-val" id="profilePointsVal">250 PTS</strong>
+          </div>
+        </div>
+        <div class="loyalty-desc">
+          <span>Dapat ditukarkan dengan diskon voucher $25.00 pada seasonal drop ShopVibe berikutnya.</span>
+        </div>
+      </div>
+
+      <div class="order-history-section">
+        <div class="order-history-header">
+          <h4>Riwayat Pesanan (Order History)</h4>
+          <span class="order-count-badge" id="orderCountBadge">2 Pesanan</span>
+        </div>
+        <div id="orderHistoryContainer" class="order-history-list"></div>
+      </div>
+    </div>
+
+    <div class="drawer-footer profile-drawer-footer">
+      <button type="button" id="signOutBtn" class="btn btn-secondary btn-lg sign-out-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Keluar (Sign Out)</span>
+      </button>
+    </div>
+  </aside>
 
   <div id="toastContainer" class="toast-container" aria-live="assertive"></div>
 

@@ -197,6 +197,7 @@ const toastContainer = document.getElementById('toastContainer');
 const navLinks = document.querySelectorAll('.nav-link');
 const floatingCartBtn = document.getElementById('floatingCartBtn');
 const floatingCartBadge = document.getElementById('floatingCartBadge');
+const backToTopBtn = document.getElementById('backToTopBtn');
 const freeShippingNotice = document.getElementById('freeShippingNotice');
 const freeShippingFill = document.getElementById('freeShippingFill');
 
@@ -1005,6 +1006,20 @@ finishCheckoutBtn.addEventListener('click', () => {
 printReceiptBtn.addEventListener('click', () => {
   window.print();
 });
+
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 renderProducts();
 renderCartDrawer();

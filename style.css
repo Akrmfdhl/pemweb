@@ -267,6 +267,29 @@ a {
   color: var(--color-text-placeholder);
 }
 
+.search-shortcut-kbd {
+  position: absolute;
+  right: 12px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background-color: #EAEAEA;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+  user-select: none;
+}
+
+.search-shortcut-kbd.hidden {
+  display: none;
+}
+
 .search-clear-btn {
   position: absolute;
   right: 10px;

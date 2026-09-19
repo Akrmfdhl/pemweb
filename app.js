@@ -172,6 +172,7 @@ const promoCodeInput = document.getElementById('promoCodeInput');
 const applyPromoBtn = document.getElementById('applyPromoBtn');
 const checkoutBtn = document.getElementById('checkoutBtn');
 const searchInput = document.getElementById('searchInput');
+const searchKbdShortcut = document.getElementById('searchKbdShortcut');
 const searchClearBtn = document.getElementById('searchClearBtn');
 const categoryChips = document.getElementById('categoryChips');
 const stockFilterCheckbox = document.getElementById('stockFilterCheckbox');
@@ -310,6 +311,9 @@ function renderProducts() {
 
         searchInput.value = '';
         searchClearBtn.classList.remove('visible');
+        if (searchKbdShortcut) {
+          searchKbdShortcut.classList.remove('hidden');
+        }
         stockFilterCheckbox.checked = false;
         sortSelect.value = 'featured';
 
@@ -694,7 +698,28 @@ if (continueShoppingBtn) {
 }
 
 document.addEventListener('keydown', (e) => {
+  if ((e.key === '/' || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) && document.activeElement !== searchInput) {
+    const isEditing = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName);
+    if (!isEditing || e.key !== '/') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  }
+
   if (e.key === 'Escape') {
+    if (document.activeElement === searchInput) {
+      if (searchInput.value.length > 0) {
+        searchInput.value = '';
+        state.searchQuery = '';
+        searchClearBtn.classList.remove('visible');
+        if (searchKbdShortcut) {
+          searchKbdShortcut.classList.remove('hidden');
+        }
+        renderProducts();
+      }
+      searchInput.blur();
+    }
     if (cartDrawerEl.classList.contains('active')) closeDrawer();
     if (quickViewModal.classList.contains('active')) closeQuickView();
     if (checkoutModal.classList.contains('active')) closeCheckoutModal();
@@ -799,7 +824,11 @@ sortSelect.addEventListener('change', (e) => {
 
 searchInput.addEventListener('input', (e) => {
   state.searchQuery = e.target.value;
-  searchClearBtn.classList.toggle('visible', state.searchQuery.length > 0);
+  const hasQuery = state.searchQuery.length > 0;
+  searchClearBtn.classList.toggle('visible', hasQuery);
+  if (searchKbdShortcut) {
+    searchKbdShortcut.classList.toggle('hidden', hasQuery);
+  }
   renderProducts();
 });
 
@@ -807,6 +836,9 @@ searchClearBtn.addEventListener('click', () => {
   searchInput.value = '';
   state.searchQuery = '';
   searchClearBtn.classList.remove('visible');
+  if (searchKbdShortcut) {
+    searchKbdShortcut.classList.remove('hidden');
+  }
   searchInput.focus();
   renderProducts();
 });
